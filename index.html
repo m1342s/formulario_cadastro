@@ -6,22 +6,24 @@
     <title>Cadastro de Usuários</title>
 </head>
 <body>
+    <form id="formCadastro">
     <label for="cep">CEP:</label>
-    <input type="number" id="cep">
+    <input type="number" id="cep" name="cep" required>
 
     <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro">
+    <input type="text" id="bairro" name="bairro" required>
 
     <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade">
+    <input type="text" id="cidade" name="cidade" required>
 
     <label for="estado">Estado:</label>
-    <input type="text" id="estado">
+    <input type="text" id="estado" name="estado" required>
 
     <label for="rua">Rua:</label>
-    <input type="text" id="rua">
+    <input type="text" id="rua" name="rua" required>
 
     <button type="submit">Cadastrar</button>
+    </form>
     
     <script src="index.js"></script>
 </body>
