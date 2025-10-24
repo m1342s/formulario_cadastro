@@ -16,7 +16,7 @@ document.getElementById("cep").addEventListener("blur",(evento)=>{
             document.getElementById("cidade").value=dados.cidade;
             document.getElementById("estado").value=dados.uf;
             const dadosUsuario = JSON.parse(localStorage.getItem("cadastro"))
-            localStorage.setItem("cadastro",JSON.stringify(dados))
+            localStorage.setItem("cadastro",JSON.stringify(dadosUsuario))
         }else{
             alert("CEP não encontrado ou inválido")
         }
