@@ -27,7 +27,6 @@ document.getElementById("cep").addEventListener("blur",()=>{
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(resposta =>resposta.json())
         .then(dados =>{
-            console.log(dados)
             if(dados.erro){
                 alert("CEP não encontrado ou inválido!")
                 return;
