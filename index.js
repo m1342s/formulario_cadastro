@@ -24,16 +24,17 @@ form.addEventListener("submit",(evento)=>{
 document.getElementById("cep").addEventListener("blur",()=>{
     let cep = document.getElementById("cep").value.replace(/\D/g,"")
     if(cep.length === 8){
-        fetch(`viacep.com.br/ws/${cep}/json/`)
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(resposta =>resposta.json())
         .then(dados =>{
+            console.log(dados)
             if(dados.erro){
                 alert("CEP não encontrado ou inválido!")
-                return
+                return;
             }
             document.getElementById("rua").value=dados.logradouro
             document.getElementById("bairro").value=dados.bairro
-            document.getElementById("cidade").value=dados.cidade
+            document.getElementById("cidade").value=dados.localidade
             document.getElementById("estado").value=dados.uf
         })
         .catch(()=>alert("Erro ao buscar o CEP!"))
