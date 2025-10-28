@@ -17,7 +17,7 @@ form.addEventListener("submit",(evento)=>{
     campos.forEach(campo=>{
        dados[campo]=document.getElementById(campo).value
     })
-    localStorage.getItem("cadastroUsuario",JSON.stringify(dados))
+    localStorage.setItem("cadastroUsuario",JSON.stringify(dados))
     alert("Dados salvos com sucesso!")
 })
 
