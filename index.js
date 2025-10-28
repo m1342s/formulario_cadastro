@@ -39,3 +39,13 @@ document.getElementById("cep").addEventListener("blur",()=>{
         .catch(()=>alert("Erro ao buscar o CEP!"))
     }
 });
+window.onload=function(){
+    const dados = localStorage.getItem("cadastroUsuario");
+    if(dados){
+        const dadosSalvos = JSON.parse(dados)
+         document.getElementById("rua").value=dadosSalvos.rua
+         document.getElementById("bairro").value=dadosSalvos.bairro
+         document.getElementById("cidade").value=dadosSalvos.cidade
+         document.getElementById("estado").value=dadosSalvos.estado
+    }
+}
